@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Aadi ❤️ Siyu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',sans-serif;}
+body{
+  background: linear-gradient(135deg,#ff758c,#ff7eb3);
+  height:100vh;
+  overflow:hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+}
+.splash{
+  width:100%;height:100%;display:flex;justify-content:center;align-items:center;
+  flex-direction:column;color:#fff;font-size:6vw;text-align:center;cursor:pointer;
+  z-index:1000;
+  position:absolute;
+}
+.page{
+  display:none;width:90%;max-width:500px;padding:5vw;
+  background: rgba(255,255,255,0.15);backdrop-filter: blur(12px);
+  border-radius:5vw;box-shadow:0 3vw 10vw rgba(0,0,0,0.4);
+  text-align:center;color:#fff;position:absolute;
+  z-index:10;
+}
+.page.active{display:block;animation:slideIn 0.8s forwards;}
+h1{font-size:6vw;margin:4vw 0;}
+p{font-size:4vw;line-height:1.7;}
+img{width:80%;max-width:300px;height:auto;border-radius:3vw;margin:4vw 0;}
+footer{font-size:3vw;margin-top:2vw;color:#fff;}
+.btn{padding:3vw 5vw;border:none;border-radius:3vw;font-size:4vw;cursor:pointer;margin:2vw;transition:all 0.3s;}
+.btn:hover{transform:scale(1.1);}
+.next{background:#fff;color:#ff4f7b;}
+.yes{background:#00ffb3;color:#000;}
+.no{background:#ff0033;color:#fff;position:absolute;}
+.emoji-rain span, .hearts span, .bg-hearts span{position:absolute;font-size:5vw;animation:float 6s linear infinite;}
+.bg-hearts, .emoji-rain{position:absolute;width:100%;height:100%;z-index:0;pointer-events:none;}
+@keyframes float{0%{transform:translateY(0) rotate(0deg);opacity:1;}100%{transform:translateY(-1000px) rotate(360deg);opacity:0;}}
+@keyframes slideIn{from{transform:translateX(100%);opacity:0;}to{transform:translateX(0);opacity:1;}}
+</style>
+</head>
+
+<body>
+
+<div class="bg-hearts"></div>
+<div class="hearts"></div>
+<div class="emoji-rain"></div>
+
+<!-- Music -->
+<audio id="bgMusic" loop>
+  <source src="https://files.catbox.moe/8kq9y7.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Splash screen -->
+<div class="splash" id="splash">
+  💖 Hey Siyu! <br> Tap to start your surprise 💫
+</div>
+
+<!-- PAGE TEMPLATE -->
+<div class="page active">
+  <h1>Hi Siyu 🧿✨</h1>
+  <p>This is Aadi ❤️. From the very first glance, my heart knew you were my forever 💖💫.  
+     Every thought of you makes my soul smile 🌹💌, and every beat whispers your name 💓✨🧿.</p>
+  <img src="https://i.pinimg.com/474x/c4/98/e4/c498e42d07eb2aca02f66ece305cff91.jpg" alt="Cute romantic cartoon 1">
+  <footer>❤️ By AadixSiya</footer>
+  <button class="btn next" onclick="nextPage()">Next ➡️</button>
+</div>
+
+<div class="page">
+  <h1>You Are My Home 🏡💘</h1>
+  <p>Even in the darkest nights 🌌, thinking of you lights up my world 🌟💖.  
+     Every laugh we share echoes in my heart 🎶💓, and your smile is the reason I breathe 💌🧿✨.</p>
+  <img src="https://i.etsystatic.com/40718390/r/il/33e795/6390867358/il_fullxfull.6390867358_907q.jpg" alt="Cute romantic cartoon 2">
+  <footer>❤️ By AadixSiya</footer>
+  <button class="btn next" onclick="nextPage()">Next ➡️</button>
+</div>
+
+<div class="page">
+  <h1>My Sunshine ☀️💛</h1>
+  <p>Your presence turns ordinary moments into dreams 🌈💖.  
+     When you laugh, my heart dances 💓🎶, when you speak, the world feels magical ✨💌🧿.  
+     Siyu, you are the poetry my soul always wanted 💫🌹.</p>
+  <img src="https://png.pngtree.com/png-clipart/20240604/original/pngtree-cute-cartoon-couple-png-image_15245270.png" alt="Cute romantic cartoon 3">
+  <footer>❤️ By AadixSiya</footer>
+  <button class="btn next" onclick="nextPage()">Next ➡️</button>
+</div>
+
+<div class="page">
+  <h1>My Safe Space 🛡️❤️</h1>
+  <p>With you, I feel invincible 💪💖. Your love makes ordinary days extraordinary ✨🧿💓.</p>
+  <img src="https://img.pikbest.com/backgrounds/20241221/cute-cartoon-couple-with-romantic-kiss-in-a-valentines-day_11282352.jpg%21w700wp" alt="Cute romantic cartoon 4">
+  <footer>❤️ By AadixSiya</footer>
+  <button class="btn next" onclick="nextPage()">Next ➡️</button>
+</div>
+
+<div class="page">
+  <h1>I Choose You Forever 🔒💘</h1>
+  <p>No dream is complete without you 🌹💌. Every moment with you feels like destiny 💫❤️.</p>
+  <img src="https://i.pinimg.com/564x/91/b6/cd/91b6cd793705610b6aca86552f661546.jpg" alt="Cute romantic cartoon 5">
+  <footer>❤️ By AadixSiya</footer>
+  <button class="btn next" onclick="nextPage()">Next ➡️</button>
+</div>
+
+<div class="page">
+  <h1>Life Feels Complete 🌌💖</h1>
+  <p>Your love turns ordinary life into a fairy tale 🏰✨. My heart beats only for you ❤️💫💓.</p>
+  <img src="https://png.pngtree.com/background/20250417/original/pngtree-new-cute-couple-cartoon-photos-picture-image_16262160.jpg" alt="Cute romantic cartoon 6">
+  <footer>❤️ By AadixSiya</footer>
+  <button class="btn next" onclick="nextPage()">Next ➡️</button>
+</div>
+
+<div class="page">
+  <h1>Will You Be Mine? 💍❤️</h1>
+  <p>Siyu, let’s write a story full of love, laughter, endless emojis, and forever 💓🌹💌✨🧿💖.</p>
+  <footer>❤️ By AadixSiya</footer>
+  <button class="btn yes" onclick="yesClicked()">YES 💖💓</button>
+  <button class="btn no" id="noBtn">NO 💔😢</button>
+</div>
+
+<script>
+let current=0;
+const pages=document.querySelectorAll('.page');
+const music=document.getElementById('bgMusic');
+const splash=document.getElementById('splash');
+const emojiRain=document.querySelector('.emoji-rain');
+const emojis=["💖","🌹","💌","✨","🧿","💓","🌈"];
+
+// First tap anywhere starts music and hides splash
+splash.addEventListener("click",()=>{
+  splash.style.display="none";
+  pages[0].style.display="block";
+  pages[0].classList.add("active");
+  // Fix for mobile autoplay
+  music.play().catch(()=>{});
+});
+
+// Page navigation
+function nextPage(){
+  pages[current].classList.remove('active');
+  current++;
+  if(current<pages.length){
+    pages[current].classList.add('active');
+  }
+}
+
+// YES button explosion
+function yesClicked(){
+  heartExplosion(70,"💖");
+  alert("You just made Aadi’s world complete ❤️💖💫");
+}
+
+// NO button prank
+const noBtn=document.getElementById("noBtn");
+const msgs=[
+  "Are you serious? 🥺💔",
+  "My heart just skipped a beat 💌💔",
+  "Don’t run from love 😢💖",
+  "I’ll wait forever ❤️🧿",
+  "Try again… maybe? 💓✨"
+];
+noBtn.addEventListener("mouseover",()=>{
+  noBtn.style.left=Math.random()*80+"%";
+  noBtn.style.top=Math.random()*80+"%";
+  alert(msgs[Math.floor(Math.random()*msgs.length)]);
+});
+
+// Heart explosion function
+function heartExplosion(count=50,emoji="💖"){
+  for(let i=0;i<count;i++){
+    let span=document.createElement("span");
+    span.innerHTML=emoji;
+    span.style.left=Math.random()*100+"%";
+    span.style.top="100%";
+    span.style.fontSize=Math.random()*35+15+"px";
+    document.querySelector('.hearts').appendChild(span);
+    setTimeout(()=>span.remove(),4000);
+  }
+}
+
+// Background floating hearts continuously
+const bgContainer=document.querySelector('.bg-hearts');
+for(let i=0;i<30;i++){
+  let span=document.createElement("span");
+  span.innerHTML="💖";
+  span.style.left=Math.random()*100+"%";
+  span.style.top=Math.random()*100+"%";
+  span.style.fontSize=Math.random()*25+10+"px";
+  span.style.opacity=Math.random();
+  span.style.animationDuration= (5+Math.random()*5) + "s";
+  bgContainer.appendChild(span);
+}
+
+// Emoji rain continuously
+setInterval(()=>{
+  let span=document.createElement("span");
+  span.innerHTML=emojis[Math.floor(Math.random()*emojis.length)];
+  span.style.left=Math.random()*100+"%";
+  span.style.top="100%";
+  span.style.fontSize=Math.random()*5+3+"vw";
+  emojiRain.appendChild(span);
+  setTimeout(()=>span.remove(),6000);
+},200);
+
+</script>
+
+</body>
+</html>
